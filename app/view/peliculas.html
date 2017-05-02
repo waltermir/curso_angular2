@@ -1,0 +1,23 @@
+<h1> {{titulo}} </h1>
+
+<nav>
+	<ul>
+		<li>
+			<a [routerLink] = "['/peliculas']"> Inicio</a>
+		</li>
+
+		<li>
+			<a [routerLink] = "['/crear-pelicula']"> Añadir Pelicula</a>
+		</li>
+
+		<li>
+			<a [routerLink] = "['/Contacto']"> Contacto</a>
+		</li>
+
+	</ul>
+
+</nav>
+<!-- <peliculas-list> </peliculas-list> -->
+<router-outlet></router-outlet>
+
+<peliculas-footer> </peliculas-footer> 
