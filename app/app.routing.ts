@@ -1,5 +1,5 @@
 import {ModuleWithProviders} from '@angular/core';
-import {Routes, RouterModule} from '@angular/router';
+import {Routes, RouterModule, RouteParams} from '@angular/router';
 import {PeliculasListComponent} from "./components/peliculas-list.component";
 import {HolaMundoComponent} from "./components/holamundo.component";
 import {CrearPeliculaComponent} from "./components/crear-pelicula.component";
@@ -24,7 +24,13 @@ const appRoutes: Routes = [
 		{
 		path : 'crear-pelicula',
 		component: CrearPeliculaComponent
+	},
+
+		{
+		path : 'crear-pelicula/:titulo',
+		component: CrearPeliculaComponent
 	}
+
 
 
 ];

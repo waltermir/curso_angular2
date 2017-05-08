@@ -21,6 +21,10 @@ var appRoutes = [
     {
         path: 'crear-pelicula',
         component: crear_pelicula_component_1.CrearPeliculaComponent
+    },
+    {
+        path: 'crear-pelicula/:titulo',
+        component: crear_pelicula_component_1.CrearPeliculaComponent
     }
 ];
 exports.appRoutingProviders = [];

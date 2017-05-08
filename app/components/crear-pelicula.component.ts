@@ -1,7 +1,8 @@
 import {Component} from "@angular/core";
 import {PeliculasService} from "../services/peliculas.service";
-import {Router} from '@angular/router';
+import {Router, RouteParams} from '@angular/router';
 import {Pelicula} from '../model/pelicula';
+import {ngOnInit} from "@angular/core";
 
 
 @Component({
@@ -10,14 +11,14 @@ import {Pelicula} from '../model/pelicula';
 
 	})
 
-export class CrearPeliculaComponent{
+export class CrearPeliculaComponent implements ngOnInit{
 
 	public tituloPelicula : string = "";
 	public nuevaPelicula : Pelicula;
 
 	constructor (private _PeliculasService: PeliculasService,
-					private _router: Router/*,
-					private _routeParams: RouteParams*/){}
+					private _router: Router,
+					private _routeParams: RouteParams){}
 
 	onSubmit(){
 
@@ -29,6 +30,7 @@ export class CrearPeliculaComponent{
 
 	ngOnInit():any {
 		this.nuevaPelicula = new Pelicula(0,"","","");
+		this.tituloPelicula = this._routeParams.get("titulo");
 	}
 
 

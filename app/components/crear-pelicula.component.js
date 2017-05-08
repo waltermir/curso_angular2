@@ -14,11 +14,10 @@ var peliculas_service_1 = require("../services/peliculas.service");
 var router_1 = require("@angular/router");
 var pelicula_1 = require("../model/pelicula");
 var CrearPeliculaComponent = (function () {
-    function CrearPeliculaComponent(_PeliculasService, _router /*,
-        private _routeParams: RouteParams*/) {
+    function CrearPeliculaComponent(_PeliculasService, _router, _routeParams) {
         this._PeliculasService = _PeliculasService;
-        this._router = _router; /*,
-        private _routeParams: RouteParams*/
+        this._router = _router;
+        this._routeParams = _routeParams;
         this.tituloPelicula = "";
     }
     CrearPeliculaComponent.prototype.onSubmit = function () {
@@ -27,6 +26,7 @@ var CrearPeliculaComponent = (function () {
     };
     CrearPeliculaComponent.prototype.ngOnInit = function () {
         this.nuevaPelicula = new pelicula_1.Pelicula(0, "", "", "");
+        this.tituloPelicula = this._routeParams.get("titulo");
     };
     return CrearPeliculaComponent;
 }());
@@ -35,8 +35,8 @@ CrearPeliculaComponent = __decorate([
         templateUrl: "app/view/crear-pelicula.html"
     }),
     __metadata("design:paramtypes", [peliculas_service_1.PeliculasService,
-        router_1.Router /*,
-        private _routeParams: RouteParams*/])
+        router_1.Router, typeof (_a = typeof router_1.RouteParams !== "undefined" && router_1.RouteParams) === "function" && _a || Object])
 ], CrearPeliculaComponent);
 exports.CrearPeliculaComponent = CrearPeliculaComponent;
+var _a;
 //# sourceMappingURL=crear-pelicula.component.js.map

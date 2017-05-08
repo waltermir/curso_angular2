@@ -1,7 +1,7 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, RouteParams } from '@angular/router';
 import { AppComponent }  from './app.component';
 import {PeliculasListComponent} from "./components/peliculas-list.component";
 import {PeliculasFooterComponent} from "./components/peliculas-footer.component";
